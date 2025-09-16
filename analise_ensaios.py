@@ -5,7 +5,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
-# --- INÍCIO DA EXECUÇÃO DO PROJETO ---
 if __name__ == "__main__":
     
     print("--- ROTINA DE INGESTÃO E LIMPEZA DE DADOS ---")
@@ -24,11 +23,10 @@ if __name__ == "__main__":
     print(df.isnull().sum())
 
     # 3. Limpeza de Dados: Remove todas as linhas que contêm valores nulos na tabela 'df'
-    #    O parâmetro 'inplace=True' modifica o DataFrame 'df' diretamente.
     df.dropna(inplace=True)
     print("\nLinhas com valores nulos foram removidas com sucesso!")
 
-    # 4. Verificação: Mostra a tabela de dados limpa e a nova contagem de nulos (que deve ser zero)
+    # 4. Verificação: Mostra a tabela de dados limpa e a nova contagem de nulos 
     print("\nTabela após a limpeza:")
     print(df)
     print("\nContagem de valores nulos após a limpeza:")
@@ -84,4 +82,5 @@ if __name__ == "__main__":
     print(f"Previsão do resultado do ensaio: {previsao[0]}")
     
     print("\n" + "="*50 + "\n")
+
     print("Rotina de análise de ensaios concluída.")
